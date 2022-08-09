@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap" rel="stylesheet">
+    <title>Receitas</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a id="pgHome" class="botaoHome">Home</a></li>
+                <li><a id="pgAdicionar" class="botaoAdicionar">Adicionar</a></li>
+                <li><a id="pgEditar" class="botaoEditar">Editar</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="divHome">
+        <div id="title">
+            <H1>Meu Livro de Receitas</H1>
+        </div>
+        <div id="divOpcoes">
+            <input type="radio" name="opcoes" value="Salgados" id="Salgados">
+            <label for="Salgados">Salgados</label>
+            <input type="radio" name="opcoes" value="Sobremesa" id="Sobremesa">
+            <label for="Sobremesa">Sobremesas</label>
+            <input type="radio" name="opcoes" value="Todos" id="Todos">
+            <label for="Todos">Todos</label>
+            <button id="btnPesquisar">Pesquisar</button>
+        </div>
+        <div id="receitas">
+        </div>
+    </div>
+    <div id="divAdicionar" style="display: none;">
+        <div id="title">
+            <h1>Adicionar Receitas</h1>
+        </div>
+        <div id="form">
+            <div class="divForm">
+                <label for="">Nome: </label>
+                <input type="text" id="nomeReceita" placeholder="Nome da receita" />
+            </div>
+            <div class="divForm">
+                <label for="">Categoria: </label>
+                <input type="text" name="" id="catReceita" placeholder="Salgados | Sobremesa">
+            </div>
+            <div class="divForm"> 
+                <label for="">Descrição: </label>
+                <input type="text" name="" id="descReceita" placeholder="Breve Descrição">
+            </div>
+            <div class="divForm">
+                <label for="">URL: </label>
+                <input type="text" name="" id="urlReceita" placeholder="url da receita">
+            </div>
+            <div class="divForm">
+                <label for="">IMG: </label>
+                <input type="text" name="" id="imgReceita" placeholder="img da receita">
+            </div>
+            <div>
+                <button id="btnAdicionar">Adicionar</button>
+            </div>
+        </div>
+        <div id="res">
+        </div>
+    </div>
+    <div id="divEditar" style="display: none;">
+        <div id="title">
+            <h1>Excluir Receita</h1>
+        </div>
+        <div id="form">
+            <div class="divForm">
+                <label for="">Id: </label>
+                <input type="text" id="idReceitaExcluir" placeholder="Informe o ID da receita a ser EXCLUIDA" />
+            </div>
+            <div>
+                <button id="btnExcluir"> Deletar </button>
+            </div>
+            <div id="resExcluir">
+            </div>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="index.js"></script>
+
+</html>
